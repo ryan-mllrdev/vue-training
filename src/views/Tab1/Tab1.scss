@@ -1,0 +1,41 @@
+.tab1 {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100%;
+  .header {
+    display: flex;
+    justify-content: center;
+    .topPanel {
+      display: flex;
+    }
+  }
+  .tabContent {
+    display: flex;
+    justify-content: space-around;
+    .leftPanel,
+    .rightPanel,
+    .middlePanel {
+      display: flex;
+    }
+    .rightPanel {
+      flex-flow: column;
+    }
+    .middlePanel {
+      display: flex;
+      position: relative;
+      margin: 20px;
+      border: solid 1px lightgray;
+      &::after {
+        content: '.';
+        top: 50px;
+        right: 0px;
+        border: solid 1px lightslategray;
+        background: gray;
+        height: 5px;
+        width: 2px;
+        position: absolute;
+      }
+    }
+  }
+}

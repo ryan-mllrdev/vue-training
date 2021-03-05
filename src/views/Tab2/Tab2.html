@@ -1,0 +1,11 @@
+<div class="tab2Container">
+    <search-bar searchBarTitle="SEARCH: " @onSearch="onSearch($event)" searchButtonText="Try Me"></search-bar>
+    <div class="searchResultContainer">
+        <div class="resultLabelContainer">
+            <label class="label">Search Result: ({{ prices.length }})</label>
+        </div>
+        <div class="prices" v-for="price in prices" :key="price.id">
+            <div>{{ price.first_name }}</div>
+        </div>
+    </div>
+</div>

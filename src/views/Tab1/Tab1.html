@@ -1,0 +1,22 @@
+<div class="tab1">
+    <div class="header">
+        <div class="topPanel">
+            <input placeholder="..." v-model="keyword" />
+        </div>
+    </div>
+    <div class="tabContent">
+        <div class="leftPanel">
+            <p>{{ keyword }}</p>
+        </div>
+        <div class="middlePanel">
+            <div class="middlePanelText">
+                <p>{{ middlePanel.title }}</p>
+            </div>
+        </div>
+        <div class="rightPanel">
+            <ol v-for="todo in todos" :key="todo.id">
+                <li>{{ todo.text }}</li>
+            </ol>
+        </div>
+    </div>
+</div>
